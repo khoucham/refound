@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ReFound — Lost &amp; Found</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <strong>ReFound</strong>
+  <nav><a href="index.html">Report</a><a href="browse.html">Browse</a></nav>
+</header>
+<main>
+  <div class="card">
+    <h2>Report an item</h2>
+    <label>I have…</label>
+    <select id="reportType">
+      <option value="lost">Lost an item</option>
+      <option value="found">Found an item</option>
+    </select>
+
+    <label>Description (be specific — colour, brand, unique details)</label>
+    <textarea id="description" rows="3"
+      placeholder="e.g. Lost my black leather wallet with student ID inside near the canteen"></textarea>
+    <button type="button" id="suggestBtn">Suggest category</button>
+    <span id="suggestion"></span>
+
+    <label>Category</label>
+    <select id="category">
+      <option>Electronics</option><option>Wallet/ID</option><option>Keys</option>
+      <option>Bag</option><option>Clothing</option><option>Jewellery</option>
+      <option>Books/Documents</option><option>Other</option>
+    </select>
+
+    <label>Location</label>
+    <input id="location" placeholder="e.g. DBS Aungier Street - Library">
+    <label>Date</label>
+    <input id="date" type="date">
+    <label>Your email</label>
+    <input id="email" type="email" placeholder="you@mydbs.ie">
+
+    <div id="foundOnly" class="hidden">
+      <label>Secret question (only the true owner should know the answer)</label>
+      <input id="secretQ" placeholder="e.g. What photo is on the lock screen?">
+      <label>Secret answer</label>
+      <input id="secretA" placeholder="e.g. a golden retriever">
+    </div>
+
+    <button type="button" id="submitBtn">Submit report</button>
+    <div id="result"></div>
+  </div>
+</main>
+<script src="app.js"></script>
+</body>
+</html>
